@@ -14,6 +14,7 @@ Conception d'une application Java qui permet la réécriture d'un ou plusieurs s
 - [VS Code](https://code.visualstudio.com/), éditeur de texte pour modifier le code.
 - [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack), extension du language Java réservé à l'usage de VS Code.
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight), extension d'affichage des TODOs réservé à l'usage de VS Code.
+- [JDK 11](https://openjdk.java.net/projects/jdk/11/), version de Java Development Kit pour compiler le code.
 
 ## Compatibilité
 Testé sous des environnements **Linux** et **Windows**.

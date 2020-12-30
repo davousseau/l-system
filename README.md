@@ -1,8 +1,12 @@
 # L-Système
-![Capture d'écran du jeu](res/l-systeme.png)
+<img src="res/icon.png" alt="Icône de l'application" width="64"/>
 
 ## Auteur
 [David Brousseau](mailto:dbrsseau@gmail.com)
+
+## Mentions des ressources utilisées
+- [Tree Drawing, green tree, leaf, branch, plant Stem png](https://www.pngwing.com/en/free-png-zflyc)
+- [Chasing Hearts Font](https://www.1001fonts.com/chasing-hearts-font.html)
 
 ## Contexte académique
 Projet effectué dans le cadre du cours **INF2120 Programmation II**, remis à l'enseignant **Bruno Malenfant** à l'[Université du Québec à Montréal](https://etudier.uqam.ca/) le 10 décembre 2017. Ce projet a été retranscris en décembre 2020 pour le rendre public et l'insérer dans mon porte-folio.
@@ -20,6 +24,8 @@ Conception d'une application Java qui permet la réécriture d'un ou plusieurs s
 Testé sous des environnements **Linux** et **Windows**.
 
 ## Fonctionnement
+![Capture d'écran de l'application](res/l-systeme.png)
+
 Le fonctionnement de cette application est plutôt simple lorsqu'on connaît les bases d'un L-Système. Il suffit d'insérer les règles à suivre dans les cases à cet effet et d'entrer l'axiome de départ suivi du nombre d'itération. Le résultat s'affiche lorsqu'on appuie sur le bouton interpréter pour réécrire les symboles selon les règles sélectionnées.
 
 ## Références

@@ -1,5 +1,6 @@
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 import javax.swing.JSeparator;
@@ -14,6 +15,7 @@ import javax.swing.SwingUtilities;
 public class Application {
 
     // Constants
+    private final static String ICON_URL   = "res/icon.png";
     public final static int     ROW_HEIGHT = 25;
     private final static String TITLE      = "Interpréteur L-Système";
     private final static String VERSION    = "0.1";
@@ -59,6 +61,7 @@ public class Application {
     /** Initialize the application. */
     private void initialize() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setIconImage(Toolkit.getDefaultToolkit().getImage(ICON_URL));
         frame.setLayout(new GridBagLayout());
         frame.setResizable(false);
         frame.setTitle(TITLE + " v" + VERSION);

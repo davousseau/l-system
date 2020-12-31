@@ -26,7 +26,7 @@ Testé sous des environnements **Linux** et **Windows**.
 ## Fonctionnement
 ![Capture d'écran de l'application](res/l-systeme.png)
 
-Le fonctionnement de cette application est plutôt simple lorsqu'on connaît les bases d'un L-Système. Il suffit d'insérer les règles à suivre dans les cases à cet effet et d'entrer l'axiome de départ suivi du nombre d'itération. Le résultat s'affiche lorsqu'on appuie sur le bouton interpréter pour réécrire les symboles selon les règles sélectionnées.
+Le fonctionnement de cette application est plutôt simple lorsqu'on connaît les bases d'un L-Système. Il suffit d'insérer les règles à suivre dans les cases à cet effet et d'entrer l'axiome de départ suivi du nombre d'itération. Le résultat s'affiche lorsqu'on appuie sur le bouton interpréter pour réécrire les symboles selon les règles ajoutées.
 
 ## Références
 - [Intro to L-systems](https://morphocode.com/intro-to-l-systems/)

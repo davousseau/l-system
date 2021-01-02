@@ -32,6 +32,7 @@ Le fonctionnement de cette application est plutôt simple lorsqu'on connaît les
 - [Intro to L-systems](https://morphocode.com/intro-to-l-systems/)
 - [Trail: Creating a GUI With JFC/Swing](https://docs.oracle.com/javase/tutorial/uiswing/)
 - [SWING Tutorial](https://www.tutorialspoint.com/swing/index.htm)
-- [La gestion dynamique des objets et l'introspection](https://www.jmdoudoux.fr/java/dej/chap-introspection.htm#introspection-3)
+- [~~La gestion dynamique des objets et l'introspection~~](https://www.jmdoudoux.fr/java/dej/chap-introspection.htm#introspection-3)
 - [Difference between validate(), revalidate() and invalidate() in Swing GUI](https://stackoverflow.com/questions/9510125/difference-between-validate-revalidate-and-invalidate-in-swing-gui)
 - [What are the differences between paint() method and repaint() method in Java?](https://www.tutorialspoint.com/what-are-the-differences-between-paint-method-and-repaint-method-in-java)
+- [Check If a String Is Numeric in Java](https://www.baeldung.com/java-check-string-number)

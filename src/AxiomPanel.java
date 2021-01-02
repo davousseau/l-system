@@ -30,11 +30,11 @@ public class AxiomPanel {
     /** Interpret button */
     private final JButton interpretButton;
 
-    /** Iterations label */
-    private final JLabel iterationsLabel;
+    /** Iteration label */
+    private final JLabel iterationLabel;
 
-    /** Iterations text field */
-    public final JTextField iterationsTextField;
+    /** Iteration text field */
+    public final JTextField iterationTextField;
 
     /** Panel */
     public final JPanel panel;
@@ -59,8 +59,8 @@ public class AxiomPanel {
         axiomLabel = new JLabel("Axiome");
         axiomTextField = new JTextField();
         interpretButton = new JButton("Interpréter");
-        iterationsLabel = new JLabel("Itérations");
-        iterationsTextField = new JTextField();
+        iterationLabel = new JLabel("Itération");
+        iterationTextField = new JTextField();
         panel = new JPanel(new GridBagLayout());
         parent = app;
         resultLabel = new JLabel("Résultat");
@@ -82,9 +82,9 @@ public class AxiomPanel {
         gbc.insets = new Insets(3, 6, 3, 6);
         panel.add(axiomTextField, gbc);
         gbc.gridy = 2;
-        panel.add(iterationsLabel, gbc);
+        panel.add(iterationLabel, gbc);
         gbc.gridy = 3;
-        panel.add(iterationsTextField, gbc);
+        panel.add(iterationTextField, gbc);
         gbc.gridy = 4;
         panel.add(resultLabel, gbc);
         gbc.gridy = 5;
@@ -100,6 +100,7 @@ public class AxiomPanel {
     private void initialize() {
         interpretButton.addActionListener(e -> parent.lSystemEngine.interpret(this));
         resultTextArea.setEditable(false);
+        resultTextArea.setLineWrap(true);
         resultScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         createLayout();
         updateComponentSizes();
@@ -109,7 +110,7 @@ public class AxiomPanel {
     private void updateComponentSizes() {
         axiomTextField.setPreferredSize(new Dimension(COLUMN_WIDTH, Application.ROW_HEIGHT));
         interpretButton.setPreferredSize(new Dimension(COLUMN_WIDTH, Application.ROW_HEIGHT));
-        iterationsTextField.setPreferredSize(new Dimension(COLUMN_WIDTH, Application.ROW_HEIGHT));
+        iterationTextField.setPreferredSize(new Dimension(COLUMN_WIDTH, Application.ROW_HEIGHT));
         resultScrollPane.setPreferredSize(new Dimension(COLUMN_WIDTH, Application.ROW_HEIGHT * 3));
     }
 }

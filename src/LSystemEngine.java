@@ -31,9 +31,9 @@ public class LSystemEngine {
         int status = validate(rule);
         parent.rulesListPanel.messageLabel.setForeground(Color.RED);
         if (status == 1) {
-            parent.rulesListPanel.messageLabel.setText("La règle a trop de caractères.");
+            parent.rulesListPanel.messageLabel.setText("Trop de caractères");
         } else if (status == 2) {
-            parent.rulesListPanel.messageLabel.setText("La règle existe déjà pour ce caractère.");
+            parent.rulesListPanel.messageLabel.setText("Existe déjà pour ce caractère");
         } else {
             rule.addButton.setVisible(false);
             rule.characterTextField.setEditable(false);
@@ -41,33 +41,16 @@ public class LSystemEngine {
             rule.replaceWithTextField.setEditable(false);
             contents.add(rule);
             parent.rulesListPanel.messageLabel.setForeground(Color.GREEN.darker());
-            parent.rulesListPanel.messageLabel.setText("La règle a été ajoutée avec succès.");
+            parent.rulesListPanel.messageLabel.setText("Ajoutée avec succès");
             parent.rulesListPanel.updateRulesList(contents);
         }
-    }
-
-    /**
-     * Validate a new rule.
-     * @param  rule Rule to validate
-     * @return      Status code { 0: Rule is valid, 1: Rule has too much
-     *              characters, 2: Rule already exists for this character }
-     */
-    public int validate(RulePanel rule) {
-        int status = 0;
-        String character = rule.characterTextField.getText();
-        if (character.length() != 1) { status = 1; }
-        for (int i = 0; i < contents.size(); i++) {
-            character = contents.get(i).characterTextField.getText();
-            if (character.equals(rule.characterTextField.getText())) { status = 2; }
-        }
-        return status;
     }
 
     /** Clear all rules. */
     public void clearAll() {
         contents.clear();
         parent.axiomPanel.axiomTextField.setText("");
-        parent.axiomPanel.iterationsTextField.setText("");
+        parent.axiomPanel.iterationTextField.setText("");
         parent.axiomPanel.resultTextArea.setText("");
         parent.rulesListPanel.messageLabel.setText("");
         parent.rulesListPanel.updateRulesList(contents);
@@ -86,7 +69,7 @@ public class LSystemEngine {
             if (character.equals(rule.characterTextField.getText())) {
                 contents.remove(i);
                 parent.rulesListPanel.messageLabel.setForeground(Color.GREEN.darker());
-                parent.rulesListPanel.messageLabel.setText("La règle a été supprimée avec succès.");
+                parent.rulesListPanel.messageLabel.setText("Supprimée avec succès");
                 parent.rulesListPanel.updateRulesList(contents);
                 parent.rulesListPanel.rulesList.validate();
                 parent.rulesListPanel.rulesList.repaint();
@@ -99,11 +82,71 @@ public class LSystemEngine {
      * @param axiom Axiom to interpret
      */
     public void interpret(AxiomPanel axiom) {
-        // TODO:
-        // parent.rulesListPanel.messageLabel.setForeground(Color.RED);
-        // parent.rulesListPanel.messageLabel.setText("Le nombre d'itération est
-        // invalide.");
-        parent.rulesListPanel.messageLabel.setForeground(Color.GREEN.darker());
-        parent.rulesListPanel.messageLabel.setText("L'interprétation a terminée avec succès.");
+        parent.rulesListPanel.messageLabel.setForeground(Color.RED);
+        if (parent.axiomPanel.axiomTextField.getText().isEmpty()) {
+            parent.rulesListPanel.messageLabel.setText("L'axiome est requise");
+        } else if (!isInteger(parent.axiomPanel.iterationTextField.getText())) {
+            parent.rulesListPanel.messageLabel.setText("L'itération requiert un nombre valide");
+        } else {
+            String result = parent.axiomPanel.axiomTextField.getText();
+            int iteration = Integer.parseInt(parent.axiomPanel.iterationTextField.getText());
+            for (int i = 0; i < iteration; i++) { result = rewrite(result); }
+            parent.axiomPanel.resultTextArea.setText(result);
+            parent.rulesListPanel.messageLabel.setForeground(Color.GREEN.darker());
+            parent.rulesListPanel.messageLabel.setText("Terminée avec succès");
+        }
+    }
+
+    /**
+     * Check if the iteration represents an integer.
+     * @param  iteration Iteration to check
+     * @return           True or False
+     */
+    private boolean isInteger(String iteration) {
+        if (iteration == null) { return false; }
+        try {
+            Integer.parseInt(iteration);
+        } catch (NumberFormatException e) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Rewrite the axiom following the rules.
+     * @param  axiom Axiom to rewrite
+     * @return       Result
+     */
+    private String rewrite(String axiom) {
+        String result = "";
+        for (int i = 0; i < axiom.length(); i++) {
+            String axiomCharacter = axiom.substring(i, i + 1);
+            String character = axiomCharacter;
+            for (int j = 0; j < contents.size(); j++) {
+                String ruleCharacter = contents.get(j).characterTextField.getText();
+                if (axiomCharacter.equals(ruleCharacter)) {
+                    character = contents.get(j).replaceWithTextField.getText();
+                }
+            }
+            result += character;
+        }
+        return result;
+    }
+
+    /**
+     * Validate a new rule.
+     * @param  rule Rule to validate
+     * @return      Status code { 0: Rule is valid, 1: Rule has too much
+     *              characters, 2: Rule already exists for this character }
+     */
+    private int validate(RulePanel rule) {
+        int status = 0;
+        String character = rule.characterTextField.getText();
+        if (character.length() != 1) { status = 1; }
+        for (int i = 0; i < contents.size(); i++) {
+            character = contents.get(i).characterTextField.getText();
+            if (character.equals(rule.characterTextField.getText())) { status = 2; }
+        }
+        return status;
     }
 }

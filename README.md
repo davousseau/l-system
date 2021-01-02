@@ -1,5 +1,5 @@
-# L-Système
-<img src="res/icon.png" alt="Icône de l'application" width="64"/>
+# Interpréteur L-Système
+<img src="res/icon.png" alt="Icône de l'application" width="128"/>
 
 ## Auteur
 [David Brousseau](mailto:dbrsseau@gmail.com)
@@ -24,7 +24,7 @@ Conception d'une application Java qui permet la réécriture d'un ou plusieurs s
 Testé sous des environnements **Linux** et **Windows**.
 
 ## Fonctionnement
-![Capture d'écran de l'application](res/l-systeme.png)
+![Capture d'écran de l'application](res/l-system.png)
 
 Le fonctionnement de cette application est plutôt simple lorsqu'on connaît les bases d'un L-Système. Il suffit d'insérer les règles à suivre dans les cases à cet effet et d'entrer l'axiome de départ suivi du nombre d'itération. Le résultat s'affiche lorsqu'on appuie sur le bouton interpréter pour réécrire les symboles selon les règles ajoutées.
 

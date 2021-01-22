@@ -19,6 +19,7 @@ Testé sous des environnements **Linux** et **Windows**.
 ## Environnement suggéré
 - [VS Code](https://code.visualstudio.com/), éditeur de texte pour modifier le code.
     - [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack), extension du language Java.
+    - [Clang-Format](https://marketplace.visualstudio.com/items?itemName=xaver.clang-format), extension pour le formatage du code.
     - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight), extension pour afficher les TODOs.
 
 ## Fonctionnement
@@ -26,15 +27,11 @@ Testé sous des environnements **Linux** et **Windows**.
 
 Le fonctionnement de cette application est plutôt simple lorsqu'on connaît les bases d'un L-Système. Il suffit d'insérer les règles à suivre dans les cases à cet effet et d'entrer l'axiome de départ suivi du nombre d'itération. Le résultat s'affiche lorsqu'on appuie sur le bouton interpréter pour réécrire les symboles selon les règles ajoutées.
 
-## Documentations
-- [Java Documentation](https://docs.oracle.com/en/java/)
-- [Trail: Creating a GUI With JFC/Swing](https://docs.oracle.com/javase/tutorial/uiswing/)
-
 ## Références
 - [Intro to L-systems](https://morphocode.com/intro-to-l-systems/)
+- [Check If a String Is Numeric in Java](https://www.baeldung.com/java-check-string-number)
 - [Difference between validate(), revalidate() and invalidate() in Swing GUI](https://stackoverflow.com/questions/9510125/difference-between-validate-revalidate-and-invalidate-in-swing-gui)
 - [What are the differences between paint() method and repaint() method in Java?](https://www.tutorialspoint.com/what-are-the-differences-between-paint-method-and-repaint-method-in-java)
-- [Check If a String Is Numeric in Java](https://www.baeldung.com/java-check-string-number)
 
 ## Resources
 - [Tree Drawing, green tree, leaf, branch, plant Stem png](https://www.pngwing.com/en/free-png-zflyc)

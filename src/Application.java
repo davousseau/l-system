@@ -1,7 +1,6 @@
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Toolkit;
-
 import javax.swing.JFrame;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
@@ -15,10 +14,10 @@ import javax.swing.SwingUtilities;
 public class Application {
 
     // Constants
-    private final static String ICON_URL   = "res/icon.png";
-    public final static int     ROW_HEIGHT = 25;
-    private final static String TITLE      = "Interpréteur L-Système";
-    private final static String VERSION    = "0.1";
+    private final static String ICON_URL = "res/icon.png";
+    public final static int ROW_HEIGHT = 25;
+    private final static String TITLE = "Interpréteur L-Système";
+    private final static String VERSION = "0.1";
 
     /** Axiom panel */
     public final AxiomPanel axiomPanel;

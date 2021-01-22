@@ -85,7 +85,7 @@ public class LSystemEngine {
         parent.rulesListPanel.messageLabel.setForeground(Color.RED);
         if (parent.axiomPanel.axiomTextField.getText().isEmpty()) {
             parent.rulesListPanel.messageLabel.setText("L'axiome est requise");
-        } else if (!isInteger(parent.axiomPanel.iterationTextField.getText())) {
+        } else if (! isInteger(parent.axiomPanel.iterationTextField.getText())) {
             parent.rulesListPanel.messageLabel.setText("L'itération requiert un nombre valide");
         } else {
             String result = parent.axiomPanel.axiomTextField.getText();
@@ -106,9 +106,7 @@ public class LSystemEngine {
         if (iteration == null) { return false; }
         try {
             Integer.parseInt(iteration);
-        } catch (NumberFormatException e) {
-            return false;
-        }
+        } catch (NumberFormatException e) { return false; }
         return true;
     }
 

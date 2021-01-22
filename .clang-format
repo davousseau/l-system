@@ -1,0 +1,30 @@
+---
+# The options below differ from the default values
+# All clang-format style options are listed at
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+---
+AllowShortBlocksOnASingleLine: Always
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: Always
+AllowShortLoopsOnASingleLine: true
+BasedOnStyle: LLVM
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBinaryOperators: All
+BreakConstructorInitializers: AfterColon
+BreakInheritanceList: AfterColon
+ColumnLimit: 120
+CompactNamespaces: true
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+IncludeBlocks: Regroup
+IndentPPDirectives: AfterHash
+IndentWidth: 4
+Language: Java
+NamespaceIndentation: All
+ObjCBlockIndentWidth: 4
+PointerAlignment: Middle
+SpaceAfterCStyleCast: true
+SpaceAfterLogicalNot: true
+SpaceBeforeCpp11BracedList: true
+SpacesInContainerLiterals: false
+...

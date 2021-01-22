@@ -2,7 +2,6 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
@@ -17,9 +16,9 @@ import javax.swing.SwingConstants;
 public class RulePanel {
 
     // Constants
-    private final static int CHARACTER_FIELD_WIDTH    = 100;
+    private final static int CHARACTER_FIELD_WIDTH = 100;
     private final static int REPLACE_WITH_FIELD_WIDTH = 125;
-    private final static int BUTTON_WIDTH             = 125;
+    private final static int BUTTON_WIDTH = 125;
 
     /** Add button */
     public final JButton addButton;
